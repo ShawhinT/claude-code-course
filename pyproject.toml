@@ -1,0 +1,14 @@
+[project]
+name = "claude-code-course"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.135.1",
+    "jinja2>=3.1.6",
+    "markdown>=3.10.2",
+    "pygments>=2.19.2",
+    "ruff>=0.15.4",
+    "uvicorn>=0.41.0",
+]
