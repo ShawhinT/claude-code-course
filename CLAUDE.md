@@ -14,15 +14,22 @@ A local-only, single-page web app for the Claude Code Crash Course. Students clo
 - Markdown + Pygments for content rendering with syntax highlighting
 - State persisted in `progress.json` (no database)
 
+## How to Run
+
+```bash
+# 1. Install dependencies
+uv sync
+
+# 2. Start the dev server
+uv run uvicorn app:app --reload --port 8000
+
+# 3. Open in browser
+open http://127.0.0.1:8000
+```
+
 ## Commands
 
 ```bash
-# Install dependencies
-uv sync
-
-# Run the dev server
-uv run fastapi dev app.py
-
 # Lint
 uv run ruff check .
 
@@ -38,6 +45,12 @@ uv run ruff format .
 - `static/style.css` — Custom styles including Pygments syntax highlighting theme
 - `static/images/` — Images referenced from lesson markdown
 - `progress.json` — Auto-created file tracking lesson completion state
+
+## Cleanup Rules
+
+- Always delete Playwright screenshots (*.png, *.jpeg) from the project root after validation
+- Always delete the `.playwright-mcp/` directory and its console logs after validation
+- Never commit screenshot artifacts or Playwright logs to the repo
 
 ## Key Design Decisions
 

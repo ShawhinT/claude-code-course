@@ -1,0 +1,295 @@
+/* ==========================================================================
+   Claude Code Crash Course — Custom Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Sidebar scrollbar
+   -------------------------------------------------------------------------- */
+.sidebar-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: rgba(107, 112, 148, 0.25);
+  border-radius: 4px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 112, 148, 0.45);
+}
+
+/* Firefox */
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(107, 112, 148, 0.25) transparent;
+}
+
+/* --------------------------------------------------------------------------
+   Code block container — Pygments syntax highlighting (Catppuccin Mocha)
+   -------------------------------------------------------------------------- */
+.codehilite {
+  background: #1e1e2e;
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  font-family: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Fira Code', monospace;
+}
+
+.codehilite pre {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.codehilite code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: inherit;
+  color: #cdd6f4;
+}
+
+/* Scrollbar inside code blocks */
+.codehilite::-webkit-scrollbar {
+  height: 6px;
+}
+
+.codehilite::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.codehilite::-webkit-scrollbar-thumb {
+  background: rgba(205, 214, 244, 0.15);
+  border-radius: 3px;
+}
+
+/* --- Pygments token colors (Catppuccin Mocha inspired) ------------------- */
+
+/* Default text */
+.codehilite .n   { color: #cdd6f4; } /* Name */
+.codehilite .p   { color: #cdd6f4; } /* Punctuation */
+.codehilite .w   { color: #cdd6f4; } /* Whitespace */
+
+/* Keywords */
+.codehilite .k   { color: #cba6f7; } /* Keyword */
+.codehilite .kc  { color: #cba6f7; } /* Keyword.Constant */
+.codehilite .kd  { color: #cba6f7; } /* Keyword.Declaration */
+.codehilite .kn  { color: #cba6f7; } /* Keyword.Namespace */
+.codehilite .kp  { color: #cba6f7; } /* Keyword.Pseudo */
+.codehilite .kr  { color: #cba6f7; } /* Keyword.Reserved */
+.codehilite .kt  { color: #f9e2af; } /* Keyword.Type */
+
+/* Names */
+.codehilite .na  { color: #89b4fa; } /* Name.Attribute */
+.codehilite .nb  { color: #f9e2af; } /* Name.Builtin */
+.codehilite .nc  { color: #f9e2af; } /* Name.Class */
+.codehilite .nd  { color: #89dceb; } /* Name.Decorator */
+.codehilite .ne  { color: #f38ba8; } /* Name.Exception */
+.codehilite .nf  { color: #89b4fa; } /* Name.Function */
+.codehilite .ni  { color: #cdd6f4; } /* Name.Entity */
+.codehilite .nn  { color: #f9e2af; } /* Name.Namespace */
+.codehilite .nt  { color: #cba6f7; } /* Name.Tag */
+.codehilite .nv  { color: #cdd6f4; } /* Name.Variable */
+.codehilite .no  { color: #f38ba8; } /* Name.Constant */
+
+/* Function/method calls */
+.codehilite .fm  { color: #89b4fa; } /* Name.Function.Magic */
+.codehilite .bp  { color: #f38ba8; } /* Name.Builtin.Pseudo (self, cls) */
+.codehilite .vc  { color: #cdd6f4; } /* Name.Variable.Class */
+.codehilite .vg  { color: #cdd6f4; } /* Name.Variable.Global */
+.codehilite .vi  { color: #cdd6f4; } /* Name.Variable.Instance */
+.codehilite .vm  { color: #cdd6f4; } /* Name.Variable.Magic */
+
+/* Strings */
+.codehilite .s   { color: #a6e3a1; } /* String */
+.codehilite .sa  { color: #a6e3a1; } /* String.Affix */
+.codehilite .sb  { color: #a6e3a1; } /* String.Backtick */
+.codehilite .sc  { color: #a6e3a1; } /* String.Char */
+.codehilite .sd  { color: #a6e3a1; } /* String.Doc */
+.codehilite .se  { color: #f2cdcd; } /* String.Escape */
+.codehilite .sh  { color: #a6e3a1; } /* String.Heredoc */
+.codehilite .si  { color: #f2cdcd; } /* String.Interpol */
+.codehilite .dl  { color: #a6e3a1; } /* String.Delimiter */
+.codehilite .s1  { color: #a6e3a1; } /* String.Single */
+.codehilite .s2  { color: #a6e3a1; } /* String.Double */
+.codehilite .sr  { color: #f5c2e7; } /* String.Regex */
+.codehilite .ss  { color: #a6e3a1; } /* String.Symbol */
+.codehilite .sx  { color: #a6e3a1; } /* String.Other */
+
+/* Numbers */
+.codehilite .m   { color: #fab387; } /* Number */
+.codehilite .mb  { color: #fab387; } /* Number.Bin */
+.codehilite .mf  { color: #fab387; } /* Number.Float */
+.codehilite .mh  { color: #fab387; } /* Number.Hex */
+.codehilite .mi  { color: #fab387; } /* Number.Integer */
+.codehilite .mo  { color: #fab387; } /* Number.Oct */
+.codehilite .il  { color: #fab387; } /* Number.Integer.Long */
+
+/* Operators */
+.codehilite .o   { color: #89dceb; } /* Operator */
+.codehilite .ow  { color: #cba6f7; } /* Operator.Word (and, or, not, in, is) */
+
+/* Comments */
+.codehilite .c   { color: #6c7086; font-style: italic; } /* Comment */
+.codehilite .c1  { color: #6c7086; font-style: italic; } /* Comment.Single */
+.codehilite .ch  { color: #6c7086; font-style: italic; } /* Comment.Hashbang */
+.codehilite .cm  { color: #6c7086; font-style: italic; } /* Comment.Multiline */
+.codehilite .cp  { color: #6c7086; font-style: italic; } /* Comment.Preproc */
+.codehilite .cpf { color: #6c7086; font-style: italic; } /* Comment.PreprocFile */
+.codehilite .cs  { color: #6c7086; font-style: italic; } /* Comment.Special */
+
+/* Generic tokens */
+.codehilite .gd  { color: #f38ba8; } /* Generic.Deleted */
+.codehilite .gi  { color: #a6e3a1; } /* Generic.Inserted */
+.codehilite .ge  { font-style: italic; }  /* Generic.Emph */
+.codehilite .gs  { font-weight: bold; }   /* Generic.Strong */
+.codehilite .gh  { color: #89b4fa; font-weight: bold; } /* Generic.Heading */
+.codehilite .gu  { color: #89dceb; font-weight: bold; } /* Generic.Subheading */
+.codehilite .go  { color: #6c7086; } /* Generic.Output */
+.codehilite .gp  { color: #89dceb; } /* Generic.Prompt */
+.codehilite .gt  { color: #f38ba8; } /* Generic.Traceback */
+.codehilite .err { color: #f38ba8; } /* Error */
+
+/* Line numbers (if enabled) */
+.codehilite .linenodiv {
+  padding-right: 1rem;
+  border-right: 1px solid #313244;
+  margin-right: 1rem;
+  color: #45475a;
+  user-select: none;
+}
+
+.codehilite .linenos {
+  color: #45475a;
+  user-select: none;
+}
+
+/* --------------------------------------------------------------------------
+   Inline code (NOT inside code blocks)
+   -------------------------------------------------------------------------- */
+article code:not(.codehilite code) {
+  background: #f0ece6;
+  color: #c4533b;
+  padding: 0.15em 0.4em;
+  border-radius: 0.3rem;
+  font-size: 0.85em;
+  font-family: 'JetBrains Mono', ui-monospace, 'Cascadia Code', monospace;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+/* --------------------------------------------------------------------------
+   Prose overrides — things Tailwind Typography doesn't cover perfectly
+   -------------------------------------------------------------------------- */
+
+/* Tables: cleaner styling */
+article table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+article thead th {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
+article tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Horizontal rules */
+article hr {
+  border: none;
+  height: 1px;
+  background: #e5e1dc;
+  margin: 2.5rem 0;
+}
+
+/* Task lists (checkboxes in markdown) */
+article ul:has(input[type="checkbox"]) {
+  list-style: none;
+  padding-left: 0;
+}
+
+article ul > li > input[type="checkbox"] {
+  margin-right: 0.5rem;
+  accent-color: #E07A5F;
+}
+
+/* Links in article: subtle underline on hover */
+article a {
+  text-decoration-color: rgba(224, 122, 95, 0.3);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 150ms ease;
+}
+
+article a:hover {
+  text-decoration-color: rgba(224, 122, 95, 1);
+}
+
+/* Blockquotes: accent left border + subtle background */
+article blockquote {
+  background: rgba(224, 122, 95, 0.04);
+  border-left-width: 3px;
+  border-radius: 0 0.375rem 0.375rem 0;
+  padding: 0.75rem 1rem;
+}
+
+/* Images: center them */
+article img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Main content scrollbar (subtle)
+   -------------------------------------------------------------------------- */
+main::-webkit-scrollbar {
+  width: 6px;
+}
+
+main::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+main::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   Selection color
+   -------------------------------------------------------------------------- */
+::selection {
+  background: rgba(224, 122, 95, 0.2);
+  color: inherit;
+}
+
+/* --------------------------------------------------------------------------
+   Reduced motion: disable sidebar slide animation
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  aside#sidebar {
+    transition: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Print styles (for students who want to print lessons)
+   -------------------------------------------------------------------------- */
+@media print {
+  aside { display: none !important; }
+  header { display: none !important; }
+  main { overflow: visible !important; }
+  .codehilite { break-inside: avoid; }
+}
