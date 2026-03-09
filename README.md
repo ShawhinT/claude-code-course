@@ -3,7 +3,7 @@
 A local-only, single-page web app for learning Claude Code. Clone the repo, run it locally, and follow along with the course content.
 
 Resources:
-- [Video Explainer]
+- [Video Explainer](https://youtu.be/wtOnAZUdP0A)
 
 ## Getting Started
 
